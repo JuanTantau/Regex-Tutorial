@@ -1,10 +1,9 @@
-# Title (replace with your title)
+# Regex match a hexadecimal
 
-Introductory paragraph (replace this with your text)
+A regular expression is a sequence of characters that specifies a search pattern in text. Usually such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation.
 
 ## Summary
-
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Today I will be explaining this Regex (regular expression) /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
 ## Table of Contents
 
@@ -23,27 +22,17 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
-
+ The anchors in our example are "^" and "$" also known as "position meta characters". They are placed in the beginning/end. Why? because the "^" marks the beginning of the stringg and the "$" mark the closing of the string.
 ### Quantifiers
-
+In our example we have two types of quantifiers, we have "?" and "{n}". "?" matches any preceding character 0 or 1 times. the quantifier "{n}" was used twice in our example "{6}" and "{3}". These characters match exactly the preceding character n-times.
 ### OR Operator
-
+our regex has one big group, divided by an OR operator |. In the group ([a-f0-9]{6}|[a-f0-9]{3}) we have two expresions: [a-f0-9]{6} and [a-f0-9]{3}. That just means that our example will match any of those two expresions.
 ### Character Classes
-
-### Flags
-
+In our example our "character classes" are repeated twice "[a-f0-9]". A character class matches any character enclosed in brackets.
 ### Grouping and Capturing
-
-### Bracket Expressions
-
-### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
-
+This regex expresion has one big group "([a-f0-9]{6}|[a-f0-9]{3})". This grouping is used in combination with an OR operator.
 ## Author
+Juan L. Tantau
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Github: https://github.com/JuanTantau
+
